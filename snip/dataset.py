@@ -13,7 +13,7 @@ class Dataset(object):
         self.rand = np.random.RandomState(9)
         if self.datasource == 'mnist':
             self.num_classes = 10
-            self.dataset = mnist.read_data(os.path.join(self.path_data, 'MNIST'))
+            self.dataset = mnist.read_data(self.path_data)
         elif self.datasource == 'cifar-10':
             self.num_classes = 10
             self.dataset = cifar.read_data(os.path.join(self.path_data, 'cifar-10-batches-py'))
