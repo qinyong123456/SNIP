@@ -52,7 +52,7 @@ def main():
 
     # Reset the default graph and set a graph-level seed
     tf.keras.backend.clear_session()
-    tf.set_random_seed(9)
+     tf.random.set_seed(9)
 
     # Model
     model = Model(num_classes=dataset.num_classes, **vars(args))
